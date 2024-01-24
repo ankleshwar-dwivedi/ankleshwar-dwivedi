@@ -479,14 +479,19 @@
           <h3 class="h3 form-title">Contact Form</h3>
 
           
-  <form action="mailto:ankleshwar.dwivedi@gmail.com" method="get" enctype="text/plain">
+  <form action="mailto:ankleshwar.dwivedi@gmail.com" method="get" enctype="text/plain" class="form" data-form>
     Subject:<br>
-    <input type="text" name="subject" placeholder="Your Name"><br>
+    <div class="input-wrapper">
+    <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input><br>
     Email:<br>
-    <input type="email" name="email" placeholder="Your Email"><br>
-    Message:<br>
-    <textarea name="message" rows="5" cols="30" placeholder="Your Message"></textarea><br>
-    <input type="submit" value="Send">
+    <input type="email" name="email" placeholder="Your Email" class="form-input" required data-form-input><br>
+    Message:
+    </div>
+    <textarea name="message" rows="5" cols="30" class="form-input" placeholder="Your Message" required data-form-input></textarea><br>
+    <button class="form-btn" type="submit" disabled data-form-btn>
+        <ion-icon name="paper-plane"></ion-icon>
+        <span>Send Message</span>
+    </button>
   </form>
           
 <!--           <form method="get" class="form" data-form>
